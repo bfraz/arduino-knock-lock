@@ -10,6 +10,7 @@ const int validKnockLEDPin = 3;
 const int switchPin = 2;
 const int loudKnockThreshold = 1000;
 const int softKnockThreshold = 100;
+const int whiteNoiseThreshold = 25;
 const int numberOfKnocksThreshold = 3;
 boolean isUnlocked = true;
 int knockVal = 0;
@@ -85,7 +86,7 @@ void loop(){
   }
   else{
     knockVal = analogRead(piezoPin);
-    if(numberOfKnocks < numberOfKnocksThreshold && knockVal > 25){
+    if(numberOfKnocks < numberOfKnocksThreshold && knockVal > whiteNoiseThreshold){
       checkIfValidKnock();
     }
     if(canUnlock()){
