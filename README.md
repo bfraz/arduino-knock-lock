@@ -10,4 +10,4 @@ Push the button to move the servo motor in the locked position. Knock three time
 
 
 ### No Place Like Home
-![Alt text](locked_position.png)
+![Alt text](locked_position.PNG)
